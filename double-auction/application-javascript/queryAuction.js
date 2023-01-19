@@ -22,10 +22,8 @@ async function queryAuction(ccp,wallet,user,auctionID) {
 
 		const network = await gateway.getNetwork(myChannel);
 		const contract = network.getContract(myChaincodeName);
-
-		console.log('\n--> Evaluate Transaction: query the auction');
-		let result = await contract.evaluateTransaction('QueryBids',auctionID);
-		console.log('*** Result: Auction: ' + prettyJSONString(result.toString()));
+		let result = await contract.evaluateTransaction('QueryAuction',auctionID);
+		console.log(prettyJSONString(result.toString()));
 
 		gateway.disconnect();
 	} catch (error) {

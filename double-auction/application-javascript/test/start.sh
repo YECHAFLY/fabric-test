@@ -8,9 +8,10 @@ node ../registerEnrollUser.js org1 auctioneer
 node ../initMarket.js org1 auctioneer
 node ../createAuction.js org1 auctioneer 000
 python generateBids.py
-bash accountReg.sh
-bash bidConfig.sh 000
-for (( i = 1; i <= 1 ; i ++ ))
-do
-  node ../withdraw.js org1 buyer1 000
-done
+chmod -R 777 ../wallet
+#bash accountReg.sh
+#bash bidConfig.sh 000
+#for (( i = 1; i <= 1 ; i ++ ))
+#do
+#  node ../withdraw.js org1 buyer1 000
+#done
